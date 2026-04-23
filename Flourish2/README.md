@@ -5,7 +5,8 @@ This chart shows how housing units added in Seattle change from year to year. It
 The dataset contains building permit records from Seattle. Each record shows the year and the number of housing units added.
 The visualization shows that housing development changes across different years, with some years having higher numbers and others having much lower. This helps us understand how construction activity varies over time.
 
-<img width="1067" height="645" alt="截圖 2026-04-22 下午10 57 52" src="https://github.com/user-attachments/assets/9b994ec2-bc45-4614-aff8-f2cf33962e22" />
+<img width="797" height="570" alt="截圖 2026-04-22 下午11 55 06" src="https://github.com/user-attachments/assets/e2698a8e-2fb2-4d14-abea-79e69ea9618d" />
+
 
 
 ## Data Source
