@@ -1,0 +1,87 @@
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background-color: #f5f0eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+p.subtitle {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+svg {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.axis path,
+.axis line {
+  stroke: #ccc;
+}
+
+.axis text {
+  fill: #555;
+  font-size: 12px;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.grid line {
+  stroke: #eeeeee;
+  stroke-dasharray: 3, 3;
+}
+
+.grid path {
+  stroke: none;
+}
+
+.line-seattle {
+  fill: none;
+  stroke: #4a90d9;    /* cool blue — Seattle */
+  stroke-width: 2.5;
+}
+
+.line-miami {
+  fill: none;
+  stroke: #e07b39;    /* warm orange — Miami */
+  stroke-width: 2.5;
+}
+
+.dot-seattle {
+  fill: #4a90d9;
+}
+
+.dot-miami {
+  fill: #e07b39;
+}
+
+.axis-label {
+  font-size: 13px;
+  fill: #555;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.chart-title {
+  font-size: 15px;
+  font-weight: bold;
+  fill: #333;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.legend text {
+  font-size: 13px;
+  fill: #444;
+  font-family: 'Source Sans 3', sans-serif;
+}
