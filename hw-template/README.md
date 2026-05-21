@@ -1,4 +1,9 @@
+# Multi-Line Chart — Seattle vs. Miami Temperatures
 
+This multi-line chart visualizes average monthly temperatures (°F) for 
+Seattle, WA and Miami, FL throughout 2023. Seattle, known for its mild 
+and rainy climate, stays considerably cooler than Miami year-round. Miami, 
+located in South Florida, maintains warm temperatures even in winter months. 
 
 <img width="773" height="594" alt="截圖 2026-05-21 上午12 12 25" src="https://github.com/user-attachments/assets/7ef5dbbc-ca88-404c-a9f4-71464b5ab7a7" />
 ## Data Source
