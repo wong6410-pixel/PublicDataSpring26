@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HW3 — Seattle vs Miami Temperatures</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+3:400,600">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+
+    <div class="container">
+
+      <h1>Seattle vs Miami: Monthly Temperatures</h1>
+      <p class="subtitle">Average monthly temperatures (°F), 2023. Toggle city and drag the slider to explore.</p>
+
+      <!-- INTERACTION 1: Dropdown to select city -->
+      <div class="controls">
+        <div class="ctrl-group">
+          <label class="ctrl-label" for="city-select">City</label>
+          <select id="city-select">
+            <option value="both">Both</option>
+            <option value="seattle">Seattle only</option>
+            <option value="miami">Miami only</option>
+          </select>
+        </div>
+
+        <!-- INTERACTION 2: Range slider to filter months -->
+        <div class="ctrl-group">
+          <label class="ctrl-label" for="month-slider">Show months up to: <span id="slider-label">December</span></label>
+          <input type="range" id="month-slider" min="1" max="12" value="12">
+        </div>
+      </div>
+
+      <!-- Chart renders here -->
+      <div id="chart"></div>
+
+      <p class="citation">
+        Data: NOAA Climate Data Online — Monthly normals, 2023.
+        <a href="https://www.ncdc.noaa.gov/" target="_blank">ncdc.noaa.gov</a>
+      </p>
+
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

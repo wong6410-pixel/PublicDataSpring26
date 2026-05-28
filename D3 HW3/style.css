@@ -1,0 +1,136 @@
+/* ─────────────────────────────────────────────────────────
+   HW3 — Seattle vs Miami Temperature Chart
+   Cool blue = Seattle, warm coral = Miami
+───────────────────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: #f4f3f0;
+  color: #222;
+  padding: 2rem;
+}
+
+/* ── Page card ───────────────────────────────────────────── */
+.container {
+  position: relative;       /* needed for tooltip positioning */
+  max-width: 780px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem 2.5rem 1.5rem;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+}
+
+/* ── Title & subtitle ────────────────────────────────────── */
+h1 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  font-size: 0.88rem;
+  color: #777;
+  margin-bottom: 1.4rem;
+}
+
+/* ── Controls row ────────────────────────────────────────── */
+.controls {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-end;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.ctrl-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.ctrl-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #999;
+}
+
+/* ── Dropdown ────────────────────────────────────────────── */
+select {
+  font-family: inherit;
+  font-size: 0.88rem;
+  padding: 6px 10px;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  min-width: 160px;
+}
+
+select:focus { outline: none; border-color: #4A90D9; }
+
+/* ── Range slider ────────────────────────────────────────── */
+input[type="range"] {
+  width: 200px;
+  accent-color: #4A90D9;
+  cursor: pointer;
+}
+
+/* ── SVG / chart area ────────────────────────────────────── */
+#chart {
+  margin-top: 0.5rem;
+}
+
+/* Axis tick labels */
+.axis text {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 12px;
+  fill: #999;
+}
+
+/* Hide axis lines */
+.axis .domain,
+.axis .tick line { display: none; }
+
+/* Horizontal gridlines */
+.grid-line {
+  stroke: #efefef;
+  stroke-dasharray: 3 3;
+}
+
+/* Y-axis label */
+.axis-label {
+  font-size: 11px;
+  fill: #bbb;
+  letter-spacing: 0.04em;
+}
+
+/* ── Tooltip ─────────────────────────────────────────────── */
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.09);
+  transition: opacity 0.1s;
+  white-space: nowrap;
+}
+
+/* ── Citation ────────────────────────────────────────────── */
+.citation {
+  margin-top: 1rem;
+  font-size: 0.76rem;
+  color: #bbb;
+}
+
+.citation a { color: #aaa; text-decoration: none; }
+.citation a:hover { color: #666; }
