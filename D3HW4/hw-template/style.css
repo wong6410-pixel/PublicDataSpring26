@@ -1,0 +1,216 @@
+:root {
+  --bg:           #f5f0eb;   /* warm off-white page background */
+  --card-bg:      #ffffff;
+  --color-seattle: #4a90d9;  /* cool blue */
+  --color-miami:   #e07b39;  /* warm orange */
+  --text-dark:    #2c2a27;
+  --text-mid:     #555;
+  --text-light:   #888;
+}
+ 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 24px 40px;
+  min-height: 100vh;
+}
+ 
+/* ─── Header / narrative copy ─────────────────────────────────────────────── */
+ 
+header {
+  max-width: 620px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+ 
+/* Small uppercase kicker above the headline */
+.kicker {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+ 
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+ 
+.intro {
+  font-size: 0.97rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto;
+}
+ 
+.intro strong {
+  color: var(--text-dark);
+  font-weight: 500;
+}
+ 
+/* ─── SVG card ────────────────────────────────────────────────────────────── */
+ 
+#chart-container svg {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.09);
+  display: block;
+  max-width: 700px;
+  width: 100%;
+}
+ 
+/* ─── Grid rings ──────────────────────────────────────────────────────────── */
+ 
+.grid-ring {
+  fill: none;
+  stroke: #e0dbd5;
+  stroke-width: 1;
+  stroke-dasharray: 3, 4;
+}
+ 
+/* ─── Spoke dividers ──────────────────────────────────────────────────────── */
+ 
+.spoke {
+  stroke: #e0dbd5;
+  stroke-width: 0.8;
+}
+ 
+/* ─── Areas (filled shapes) ───────────────────────────────────────────────── */
+ 
+/* Miami area: warm orange, slightly transparent so Seattle overlap shows */
+.area-miami {
+  fill: var(--color-miami);
+  fill-opacity: 0.25;
+  stroke: none;
+}
+ 
+/* Seattle area: cool blue, slightly more opaque to punch through */
+.area-seattle {
+  fill: var(--color-seattle);
+  fill-opacity: 0.35;
+  stroke: none;
+}
+ 
+/* ─── Outer edge lines ────────────────────────────────────────────────────── */
+ 
+.line-miami {
+  fill: none;
+  stroke: var(--color-miami);
+  stroke-width: 2.2;
+}
+ 
+.line-seattle {
+  fill: none;
+  stroke: var(--color-seattle);
+  stroke-width: 2.2;
+}
+ 
+/* ─── Data dots ───────────────────────────────────────────────────────────── */
+ 
+.dot-seattle {
+  fill: var(--color-seattle);
+  stroke: #fff;
+  stroke-width: 1.5;
+  cursor: default;     /* native SVG title tooltip shows on hover */
+}
+ 
+.dot-miami {
+  fill: var(--color-miami);
+  stroke: #fff;
+  stroke-width: 1.5;
+  cursor: default;
+}
+ 
+/* Slight zoom on hover to invite interaction */
+.dot-seattle:hover,
+.dot-miami:hover {
+  r: 6;     /* SVG attribute — won't work in CSS; kept for intent clarity */
+  stroke-width: 2;
+}
+ 
+/* ─── Ring temperature labels ─────────────────────────────────────────────── */
+ 
+.ring-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  fill: #aaa;
+}
+ 
+/* ─── Month name labels ───────────────────────────────────────────────────── */
+ 
+.month-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  fill: var(--text-mid);
+}
+ 
+/* ─── Centre year text ────────────────────────────────────────────────────── */
+ 
+.centre-year {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  fill: var(--text-dark);
+}
+ 
+.centre-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  fill: var(--text-light);
+}
+ 
+/* ─── Legend ──────────────────────────────────────────────────────────────── */
+ 
+.legend-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  fill: var(--text-mid);
+  dominant-baseline: middle;
+}
+ 
+/* ─── Annotations ─────────────────────────────────────────────────────────── */
+ 
+.annotation-line {
+  stroke: #bbb;
+  stroke-width: 0.8;
+  stroke-dasharray: 3, 3;
+}
+ 
+.annotation-text {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10.5px;
+  fill: var(--text-light);
+}
+ 
+/* ─── Footer data citation ────────────────────────────────────────────────── */
+ 
+footer {
+  max-width: 620px;
+  margin-top: 24px;
+  text-align: center;
+}
+ 
+footer p {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}

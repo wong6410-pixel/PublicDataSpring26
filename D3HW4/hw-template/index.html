@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Seattle vs Miami — Temperature Rhythm 2023</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Page header / narrative text (HTML, not SVG) -->
+  <header>
+    <p class="kicker">Climate · 2023 Monthly Data</p>
+    <h1>Two Cities, One Year</h1>
+    <p class="intro">
+      Seattle and Miami share a latitude gap of only 17°&mdash;but their temperature stories
+      couldn't be more different. Seattle dips to 41&thinsp;°F in winter and climbs to 74&thinsp;°F
+      in summer: a <strong>33-degree swing</strong> that traces a dramatic arc through the year.
+      Miami barely budges, hovering in a narrow 21-degree band between warmth and heat.
+      This radial chart uses the year as a clock face to make that contrast visceral.
+    </p>
+  </header>
+
+  <!-- D3 goes here -->
+  <div id="chart-container"></div>
+
+  <!-- Data source citation -->
+  <footer>
+    <p>
+      Data: NOAA National Centers for Environmental Information, Monthly Climate Normals 2023 &mdash;
+      Seattle-Tacoma Intl Airport  &amp; Miami Intl Airport .
+      Temperatures in °F (monthly average). Visualization built with D3 v7.
+    </p>
+  </footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
